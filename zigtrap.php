@@ -1,7 +1,7 @@
 <?php
 /*
 Plugin Name: ZigTrap
-Version: 0.2
+Version: 0.2.1
 Description: Adds a honey trap to the WordPress comment form.
 Author: ZigPress
 Author URI: http://www.zigpress.com/
@@ -46,29 +46,20 @@ class ZigTrap
 		if (version_compare($wp_version, '3.0', '<')) { wp_die('ZigTrap requires WordPress 3.0 or newer. Please update your installation.'); }
 		if (version_compare(phpversion(), '5.0.0', '<')) { wp_die('ZigTrap requires PHP 5.0.0 or newer. Please update your server.'); }
 
-		$this->Options = get_option('zigtrap_options');
-
-		add_action('comment_form', array($this, 'RenderTrap'));
-		add_filter('pre_comment_approved', array($this, 'CheckTrap'));
-
-		add_action('rightnow_end', array($this, 'DashboardStats'));
-		}
-
-
-	public function Activate()
-		{
 		if (!$this->Options = get_option('zigtrap_options')) 
 			{ 
 			$this->Options = array(); 
 			add_option('zigtrap_options', $this->Options);
 			}
-		if (!isset($this->Options['TotalTrapped'])) { $this->Options['TotalTrapped'] = 0; }
-		update_option("zigtrap_options", $this->Options);
-		}
+		if (!isset($this->Options['TotalTrapped'])) 
+			{ 
+			$this->Options['TotalTrapped'] = 0; 
+			update_option("zigtrap_options", $this->Options);
+			}
 
-
-	public function Deactivate()
-		{
+		add_action('comment_form', array($this, 'RenderTrap'));
+		add_filter('pre_comment_approved', array($this, 'CheckTrap'));
+		add_action('rightnow_end', array($this, 'DashboardStats'));
 		}
 
 
@@ -84,7 +75,7 @@ class ZigTrap
 			{
 			$this->Options['TotalTrapped']++;
 			update_option("zigtrap_options", $this->Options);
-			wp_die('ZigTrap triggered - comment is spam.');
+			wp_die('<a href="http://www.zigpress.com/wordpress/plugins/zigtrap/">ZigTrap</a> triggered - comment is spam.');
 			}
 		return $approved;
 		}
@@ -105,8 +96,6 @@ class ZigTrap
 
 
 $objZigTrap = new ZigTrap();
-register_activation_hook(__FILE__, array(&$objZigTrap, 'Activate'));
-register_deactivation_hook(__FILE__, array(&$objZigTrap, 'Deactivate'));
 
 
 # EOF
