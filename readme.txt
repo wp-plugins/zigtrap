@@ -2,9 +2,9 @@
 Contributors: ZigPress
 Donate link: http://www.zigpress.com/
 Tags: honey trap, honey pot, comments, comment form, hidden field, spam trap, anti-spam, zig, zigpress
-Requires at least: 3.0.0
-Tested up to: 3.0.5
-Stable tag: 0.1
+Requires at least: 3.0
+Tested up to: 3.1
+Stable tag: 0.2
 
 ZigTrap adds a honey trap to your comments form.
 
@@ -25,9 +25,19 @@ For further information and support, please visit [the ZigTrap home page](http:/
 
 == Frequently Asked Questions ==
 
+= Why isn't the counter working? =
+
+Please deactivate and reactivate the plugin.
+
+= Where is the counter shown? =
+
+On the Admin Dashboard page, at the bottom of the "Right Now" panel.
+
 For further information and support, please visit [the ZigTrap home page](http://www.zigpress.com/wordpress/plugins/zigtrap/).
 
 == Changelog ==
 
+= 0.2 =
+* Added simple counter on dashboard
 = 0.1 =
 * First public release
