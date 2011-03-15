@@ -4,7 +4,7 @@ Donate link: http://www.zigpress.com/
 Tags: honey trap, honey pot, comments, comment form, hidden field, spam trap, anti-spam, zig, zigpress
 Requires at least: 3.0
 Tested up to: 3.1
-Stable tag: 0.2.1
+Stable tag: 0.2.2
 
 ZigTrap adds a honey trap to your comments form.
 
@@ -20,23 +20,30 @@ For further information and support, please visit [the ZigTrap home page](http:/
 
 == Installation ==
 
-1. Unzip the installer and upload the resulting 'zigtrap' folder to the `/wp-content/plugins/` directory.  Alternatively, go to Admin > Plugins > Add New and enter ZigTrap in the search box.
-2. Activate the plugin through the 'Plugins' menu in WordPress.
+1. Check that you are using WordPress 3.0 or greater, and PHP 5.0.0 or greater.
+2. Unzip the installer and upload the resulting 'zigtrap' folder to the `/wp-content/plugins/` directory.  Alternatively, go to Admin > Plugins > Add New and enter ZigTrap in the search box.
+3. Activate the plugin through the 'Plugins' menu in WordPress.
 
 == Frequently Asked Questions ==
 
 = Why isn't the counter working? =
 
-Please deactivate and reactivate the plugin, and check that you have the latest version.
+* Please deactivate and reactivate the plugin, and check that you have the latest version.
 
 = Where is the counter shown? =
 
-On the Admin Dashboard page, at the bottom of the "Right Now" panel.
+* On the Admin Dashboard page, at the bottom of the "Right Now" panel.
+
+= Why do I get this error when activating? "Parse error: syntax error, unexpected T_STRING, expecting T_OLD_FUNCTION or T_FUNCTION or T_VAR or ‘}’ in ..." =
+
+* Your server is running PHP4.  ZigTrap requires PHP5, as do all ZigPress plugins. PHP4 is dead.
 
 For further information and support, please visit [the ZigTrap home page](http://www.zigpress.com/wordpress/plugins/zigtrap/).
 
 == Changelog ==
 
+= 0.2.2 =
+* Updated readme.txt to clarify PHP5 requirement
 = 0.2.1 =
 * Fix for the problem that meant manual deactivation and reactivation was sometimes necessary to start the counter going
 = 0.2 =
