@@ -34,7 +34,7 @@ For further information and support, please visit [the ZigTrap home page](http:/
 
 * On the Admin Dashboard page, at the bottom of the "Right Now" panel.
 
-= Why do I get this error when activating? "Parse error: syntax error, unexpected T_STRING, expecting T_OLD_FUNCTION or T_FUNCTION or T_VAR or ‘}’ in ..." =
+= Why do I get this error when activating? "Parse error: syntax error, unexpected T_STRING, expecting T_OLD_FUNCTION or T_FUNCTION or T_VAR or '}' in ..." =
 
 * Your server is running PHP4.  ZigTrap requires PHP5, as do all ZigPress plugins. PHP4 is dead.
 
