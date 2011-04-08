@@ -1,7 +1,7 @@
 <?php
 /*
 Plugin Name: ZigTrap
-Version: 0.2.2
+Version: 0.2.3
 Description: Adds a honey trap to the WordPress comment form.
 Author: ZigPress
 Author URI: http://www.zigpress.com/
@@ -58,6 +58,7 @@ class ZigTrap
 		add_action('comment_form', array($this, 'RenderTrap'));
 		add_filter('pre_comment_approved', array($this, 'CheckTrap'));
 		add_action('rightnow_end', array($this, 'DashboardStats'));
+		add_filter('plugin_row_meta', array($this, 'FilterPluginRowMeta'), 10, 2 );
 		}
 
 
@@ -84,6 +85,14 @@ class ZigTrap
 		?>
 		<p class="zigtrap-dashboard-stats"><a href="http://www.zigpress.com/wordpress/plugins/zigtrap/"><strong>ZigTrap</strong></a> has prevented <?php echo $this->Options['TotalTrapped']?> spam comments from being stored.</p>
 		<?php
+		}
+
+
+	public function FilterPluginRowMeta($links, $file) 
+		{
+		$plugin = plugin_basename(__FILE__);
+		if ($file == $plugin) return array_merge($links, array('<a target="_blank" href="http://www.zigpress.com/donations/">Donate</a>'));
+		return $links;
 		}
 
 
