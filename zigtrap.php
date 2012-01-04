@@ -1,7 +1,7 @@
 <?php
 /*
 Plugin Name: ZigTrap
-Version: 0.2.3
+Version: 0.2.4
 Description: Adds a honey trap to the WordPress comment form.
 Author: ZigPress
 Author URI: http://www.zigpress.com/
@@ -10,7 +10,7 @@ Plugin URI: http://www.zigpress.com/wordpress/plugins/zigtrap/
 
 
 /*  
-Copyright (c) 2011 ZigPress
+Copyright (c) 2011-2012 ZigPress
  
 This program is free software; you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
