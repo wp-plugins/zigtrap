@@ -1,10 +1,10 @@
 === ZigTrap ===
 Contributors: ZigPress
-Donate link: http://www.zigpress.com/
+Donate link: http://www.zigpress.com/donations/
 Tags: honey trap, honey pot, comments, comment form, hidden field, spam trap, anti-spam, zig, zigpress
-Requires at least: 3.0
-Tested up to: 3.5
-Stable tag: 0.3.2
+Requires at least: 3.1
+Tested up to: 3.5.2
+Stable tag: 0.3.3
 
 ZigTrap adds a honey trap to your comments form.
 
@@ -20,7 +20,7 @@ For further information and support, please visit [the ZigTrap home page](http:/
 
 == Installation ==
 
-1. Check that you are using WordPress 3.0 or greater, and PHP 5.0.0 or greater.
+1. Check that you are using WordPress 3.1 or greater, and PHP 5.2.4 or greater.
 2. Unzip the installer and upload the resulting 'zigtrap' folder to the `/wp-content/plugins/` directory.  Alternatively, go to Admin > Plugins > Add New and enter ZigTrap in the search box.
 3. Activate the plugin through the 'Plugins' menu in WordPress.
 
@@ -42,6 +42,10 @@ For further information and support, please visit [the ZigTrap home page](http:/
 
 == Changelog ==
 
+= 0.3.3 =
+* Changed name of trap field to keep foiling those spambots
+* Updated donation link in readme
+* Verified compatibility with WordPress 3.5.2
 = 0.3.2 =
 * Verified compatibility with WordPress 3.5
 = 0.3.1 =
