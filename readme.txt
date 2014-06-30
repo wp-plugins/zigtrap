@@ -44,6 +44,7 @@ For further information and support, please visit [the ZigTrap home page](http:/
 
 = 0.3.4 =
 * Confirmed compatibility with WordPress 3.9
+* Changed name of trap field to keep foiling those spambots
 = 0.3.3 =
 * Changed name of trap field to keep foiling those spambots
 * Updated donation link in readme
