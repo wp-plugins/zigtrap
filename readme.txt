@@ -2,9 +2,9 @@
 Contributors: ZigPress
 Donate link: http://www.zigpress.com/donations/
 Tags: honey trap, honey pot, comments, comment form, hidden field, spam trap, anti-spam, zig, zigpress
-Requires at least: 3.5
-Tested up to: 3.9
-Stable tag: 0.3.4
+Requires at least: 3.6
+Tested up to: 4.1
+Stable tag: 0.3.5
 
 ZigTrap adds a honey trap to your comments form.
 
@@ -42,6 +42,9 @@ For further information and support, please visit [the ZigTrap home page](http:/
 
 == Changelog ==
 
+= 0.3.5 =
+* Confirmed compatibility with WordPress 4.1
+* Minimum compatible version raised to 3.6
 = 0.3.4 =
 * Confirmed compatibility with WordPress 3.9
 * Changed name of trap field to keep foiling those spambots
