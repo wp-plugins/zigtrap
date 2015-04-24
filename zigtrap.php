@@ -2,18 +2,18 @@
 /*
 Plugin Name: ZigTrap
 Plugin URI: http://www.zigpress.com/plugins/zigtrap/
-Version: 0.3.5
+Version: 0.3.6
 Description: Adds a honey trap to the WordPress comment form.
 Author: ZigPress
 Requires at least: 3.6
-Tested up to: 4.1
+Tested up to: 4.2
 Author URI: http://www.zigpress.com/
 License: GPLv2
 */
 
 
 /*  
-Copyright (c) 2011-2014 ZigPress
+Copyright (c) 2011-2015 ZigPress
  
 This program is free software; you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
@@ -48,7 +48,7 @@ if (!class_exists('zigtrap')) {
 			$this->fieldname = 'extranote';
 			global $wp_version;
 			if (version_compare($wp_version, '3.5', '<')) { wp_die('ZigTrap requires WordPress 3.5 or newer. Please update your installation.'); }
-			if (version_compare(phpversion(), '5.2.4', '<')) { wp_die('ZigTrap requires PHP 5.2.4 or newer. Please update your server.'); }
+			if (version_compare(phpversion(), '5.3', '<')) { wp_die('ZigTrap requires PHP 5.3 or newer. Please update your server.'); }
 			if (!$this->options = get_option('zigtrap_options')) { 
 				$this->options = array(); 
 				add_option('zigtrap_options', $this->options);
@@ -61,6 +61,10 @@ if (!class_exists('zigtrap')) {
 			add_action('rightnow_end', array($this, 'action_rightnow_end'));
 			add_filter('pre_comment_approved', array($this, 'filter_pre_comment_approved'));
 			add_filter('plugin_row_meta', array($this, 'filter_plugin_row_meta'), 10, 2);
+			/* That which can be added without discussion, can be removed without discussion. */
+			remove_filter('the_title', 'capital_P_dangit', 11);
+			remove_filter('the_content', 'capital_P_dangit', 11);
+			remove_filter('comment_text', 'capital_P_dangit', 31);
 		}
 	
 	
